@@ -1,6 +1,7 @@
 import os
 import datetime
 import shutil
+import sys
  
 startingPath = r"***Add your path here***"
 date = datetime.date.today()
@@ -22,3 +23,4 @@ for root, dirs, files in os.walk(startingPath):
             print(f"Folder with this path -> {oldPath} <- copied and renamed -> {currentYear} <-")  
         except FileExistsError:
             print(f"Folder with this path -> {newPath} <- already exists")
+sys.exit()
